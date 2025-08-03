@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+
+body {
+    background-image: url('field-with-clouds.jpg');
+    font-family: 'Roboto', sans-serif;
+    background-color: skyblue;
+    color: skyblue;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    background-image: url('field-with-clouds.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px;
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+    width: 100%;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.title-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    outline: none;
+    color:black ;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.weather-details {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+    display: none;
+    border: 2px solid #4CAF50;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.weather-details h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.weather-info p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    text-align: center;
+}
+
+.weather-chart {
+    margin-top: 20px;
+    height: 300px;
+    width: 100%;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+
+.weather-icon {
+    display: block;
+    margin: 20px auto;
+    width: 80px;
+    height: 80px;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        padding: 60px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .weather-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .weather-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Optional animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
